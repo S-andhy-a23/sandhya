@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Quiz Results</h1>
+        <div id="results-container">
+            <h2 id="result-category"></h2>
+            <p id="result-description"></p>
+            <div class="button-container">
+                <a href="index.html" class="btn">Take the Quiz Again</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let score = new URLSearchParams(window.location.search).get("score");
+            score = parseInt(score);
+
+            let category = "";
+            let description = "";
+
+            if (score < 3) {
+                category = "Bad";
+                description = "Your understanding of dark psychology concepts needs improvement. Don't worry, you can always try the quiz again!";
+            } else if (score <= 5) {
+                category = "Average";
+                description = "You have a moderate understanding of dark psychology concepts. Keep learning to improve your knowledge!";
+            } else {
+                category = "Good";
+                description = "You have a good grasp of dark psychology concepts. Great job!";
+            }
+
+            document.getElementById("result-category").innerText = category;
+            document.getElementById("result-description").innerText = description;
+        });
+    </script>
+</body>
+</html>

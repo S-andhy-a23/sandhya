@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Psychology Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Dark Psychology Quiz</h1>
+        <div id="quiz-page">
+            <div class="quiz-header">
+                <span id="question-counter">Question 1/10</span>
+                <span>Score: <span id="score">0</span></span>
+            </div>
+            <div class="quiz-question">
+                <p id="question-text">Loading question...</p>
+            </div>
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="nextQuestion(0)">A. Loading...</button>
+                <button class="quiz-option" onclick="nextQuestion(1)">B. Loading...</button>
+                <button class="quiz-option" onclick="nextQuestion(2)">C. Loading...</button>
+                <button class="quiz-option" onclick="nextQuestion(3)">D. Loading...</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
